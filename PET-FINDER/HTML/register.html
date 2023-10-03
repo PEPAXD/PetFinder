@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/CSS/registerStyle/register.css"/>
+<link rel="shortcut icon" href="/img/logo.svg" />
+<title>PetFinder - Create Account</title>
+
+<!--FontAwesom-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+<div class="screen">
+<div class="form-container">
+    <div class="form-content">
+    <h2><a href="./index.html">PetFinder</a></h2>
+    <h3>Create an account</h3>
+    <p>
+        We need informations to help you find your Pet Partner
+    </p>
+    <form action="petMatch.html" method="GET">
+        <h3>Tell us more about yourself</h3>
+        <div class="main-informations">
+        <input name="name " type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" name="mail" />
+        <input type="password" placeholder="Password" name="password" />
+        <input type="text" placeholder="MM/DD/YYYY">
+        </div>
+
+        <h4>I liked</h4>
+        <div class="gender radio">
+        <div>
+            <label>
+            <input id="CatsButton" type="radio" name="search-gender" value="Cats" />
+            <span>Cats</span>
+            <i id="catIcon" class="fa-solid fa-cat"></i>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input id="DogsButton" type="radio" name="search-gender" value="Dogs" checked />
+            <span>Dogs</span>
+            <i id="dogIcon" class="fa-solid fa-dog"></i>
+            </label>
+        </div>
+        </div>
+        <input class="btn-login" type="submit" value="Register" />
+    </form>
+    <p>
+        Already have an account ?
+        <a href="login.html">Login</a>
+    </p>
+    </div>
+</div>
+</div>
+
+    <!--Script checkButton-->
+    <script src="/JS/checkButton.js"></script>
+
+    
+
+</body>
+
+</html>

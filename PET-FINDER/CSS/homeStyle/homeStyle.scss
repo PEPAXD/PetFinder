@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;700&display=swap");
+
+//  variables CSS
+:root {
+    --border: 2px solid #f7b267;
+    --lightOrange: #f7b267;
+}
+
+//  General styles 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    }
+
+body {
+    background:url("/img/homeBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Readex Pro", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    }
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+/* ----- navbar style ------- */
+.navbar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    
+    .logo {
+        display: flex;
+        align-items: flex-start;
+
+        color: black;
+        font-size: 40px;
+        font-weight: 200;
+        transition: 0.3s;
+
+        &:hover{
+            color: var(--lightOrange);
+        }
+
+        img{
+            width: 2.4rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .links-navbar ul {
+    display: flex;
+    align-items: center;
+
+        li {
+            margin-left: 3rem;
+
+            a {
+                color: black;
+                font-size: 20px;
+                font-weight: 200;
+
+                &:hover {
+                    color: black;
+                    text-decoration: underline;
+                    }
+
+                &.login-button {
+                    color: black;
+                    font-size: 20px;
+                    font-weight: bold;
+                
+                    background: #ffffff;
+                    border: 0;
+                    border-radius: 30px;
+                    color: black;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding: 12px 25px;
+                
+                    transition: ease-out 0.3s;
+                
+                    &:hover {
+                        color: white;
+                        background: linear-gradient(45deg, #f7b267, #f4845f);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}   
+
+//  ----- home style -------
+.home {
+text-align: center;
+padding: 20px;
+
+
+    h1 {
+    color: black;
+    font-size: 8.5rem;
+    }
+
+    h2 {
+        color: black;
+        font-size: 2rem;
+        font-weight: 200;
+        font-style: italic;
+        margin-bottom: 3rem;
+        width: 50rem;
+    }
+
+    .account-button {
+    background: linear-gradient(45deg, #f7b267, #f4845f);
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 20em;
+    padding: 10px 65px;
+    transition: 0.3s all;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 2px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        &:hover {
+            background: linear-gradient(160deg, #f4845f, #f25c54);
+        }
+    }
+
+    .responsive-login {
+        display: none;
+        background: linear-gradient(45deg, #f7b267, #f4845f);
+        border: 0;
+        border-radius: 30px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        width: 20em;
+        margin-top: 20px;
+        padding: 10px 65px;
+        transition: 0.3s all;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 2px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        &:hover {
+            background: linear-gradient(160deg, #f4845f, #f25c54);
+        }
+    }
+}
+
+.responsive-img {
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+
+    img {
+        max-width: 100%;    
+        max-height: 125%;
+    }
+}
+
+
+/* ----- responsive menu ------- */
+
+.nav-pointer{
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-pointer{
+    .button-nav {
+        background: black;
+        border-radius: 5px;
+        height: 3px;
+        width: 35px;
+        transition: all 0.5s;
+
+        &::before {
+            transform: translateY(-10px);
+        }
+
+        &::after {
+        transform: translateY(10px);
+        }
+    
+        &::before, &::after {
+        content: "";
+        background-color: black;
+        border-radius: 5px;
+        position: absolute;
+        height: 3px;
+        width: 35px;   
+        transition: all 0.5s;
+        }       
+    }
+}
+
+.open .button-nav {
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+.open .button-nav::before {
+transform: rotate(45deg);
+}
+
+.open .button-nav::after {
+transform: rotate(-45deg);
+}
+
+/* ----- footer style ----- */
+footer {
+    margin: 1rem 1rem 1rem 0;
+    position: fixed;
+    left: 0;
+    bottom: 0; 
+    padding-left: 1rem;
+
+    a:hover{
+    color: var(--lightOrange);
+    }
+
+}
+
+
+// menu desplegable
+.mobile-menu {
+    background-color: transparent;
+    color: white;
+    display: none;
+    font-size: 20px;
+    padding-left: 30%;
+    transition: all ease-out 0.3s;
+}
+
+/* ------ navbar responsive style ------  */
+@media screen and (max-width: 840px) {
+
+    body{
+        background:url("/img/homeBackground-responsive.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    //  CHECK STYLE - MENU DESPLEGABLE
+.navbar{
+
+    z-index: 1;
+    border-bottom: var(--border);
+
+        .links-navbar {
+            display: none;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+
+            right: 0;
+            top: 0;
+            margin-right: -20%;
+
+            height: 100vh;
+
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.1);
+
+
+
+            transition: 0.5s;
+
+            ul {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    font-size: 1.2em;
+                    margin: 25px 0;
+                }
+            }
+
+            .login-button{
+                display: none;
+            }
+        }
+
+        .nav-pointer {
+            display: flex;
+        }
+    }
+
+.screen{
+    justify-content: center;
+    align-items: center;
+
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 5rem;
+        background: linear-gradient(to bottom, #eef2fb 25%, transparent);
+        padding-bottom: 25%;
+
+    h1 {
+        font-size: 15vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+        margin-bottom: 1.5rem;
+    }
+    
+    .account-button {
+        font-size: 15px;
+    }
+
+    .responsive-login {
+        display: block;
+        font-size: 15px;
+    }
+}
+
+.responsive-img{
+    display: flex;
+}
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    padding-right: 1.2rem;
+
+    p {
+    font-size: 2vw;
+}
+}
+}

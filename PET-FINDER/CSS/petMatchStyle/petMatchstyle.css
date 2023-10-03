@@ -1,0 +1,343 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Readex Pro", sans-serif;
+  background: url("/img/MatchBackgroundCreateAccount.png");
+  overflow: hidden;
+  background-size: 75%;
+  height: 95vh;
+}
+
+header {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: #f79e46;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1.5rem;
+}
+header .header .avatar {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+header .header .avatar img {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+}
+header .header .title {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #fff;
+}
+header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
+}
+header .navbar ul {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+header .navbar ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 60px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+header .navbar ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar ul li:hover {
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+header .navbar ul li:hover::before {
+  opacity: 1;
+}
+header .navbar ul li:hover::after {
+  opacity: 0.5;
+}
+header .navbar ul li:hover .icon {
+  transform: scale(0);
+  transition-delay: 0.25s;
+}
+header .navbar ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+  color: rgb(247, 158, 70);
+  font-weight: bold;
+}
+header .navbar ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+header .navbar ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+header .navbar ul li span {
+  position: absolute;
+}
+header .navbar ul li .title {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  padding: 1rem 3rem;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.2));
+  height: 100%;
+}
+
+.side {
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #e1e1e1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.side .tab {
+  height: 2rem;
+  width: 100%;
+  display: grid;
+  text-align: center;
+  background: #fff;
+}
+.side .tab .menu {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+.side .tab .menu button {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  border: none;
+  color: #888;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.side .tab .menu button:hover {
+  color: #f7b267;
+}
+.side .tab .menu button:nth-child(1):hover ~ .line {
+  left: 0;
+}
+.side .tab .menu button:nth-child(2):hover ~ .line {
+  left: 50%;
+}
+.side .tab .menu .line {
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #f7b267;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+.side .tab .menu li:nth-child(2):hover ~ .line {
+  left: 50%;
+}
+.side .messages {
+  display: flex;
+  align-items: center;
+  width: 25rem;
+  padding: 1rem;
+  transition: 0.2s box-shadow;
+}
+.side .messages .avatar img {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.side .messages .user {
+  padding: 0 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+.side .messages .text {
+  width: 12.5rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+.side .messages:hover {
+  box-shadow: 0 0 15px 0 rgba(43, 78, 78, 0.1);
+  border-right: 5px solid #f7b267;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 2rem;
+}
+.content .cardCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 90%;
+  border-radius: 2rem;
+  box-shadow: 0px 11px 6px -8px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(247, 178, 103, 0.8);
+  background-color: #fff;
+}
+.content .cardCover .card {
+  position: relative;
+  height: 28rem;
+  height: 65%;
+  margin-top: 1rem;
+}
+.content .cardCover .card .user {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+.content .cardCover .card .user img {
+  width: 20rem;
+}
+.content .cardCover .card .user .profile {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+}
+.content .cardCover .card .user .profile .name {
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 5px #444;
+}
+.content .cardCover .card .user .profile .name span {
+  padding-left: 1rem;
+}
+.content .cardCover .card .user .profile .local {
+  display: flex;
+  align-items: center;
+  padding: 0 0 1rem 0;
+}
+.content .cardCover .card .user .profile .local span {
+  color: #fff;
+  padding: 0 10px;
+  text-shadow: 1px 1px 5px #444;
+}
+.content .petsLore {
+  width: 22rem;
+  margin: 1rem;
+}
+.content .petsLore p {
+  margin: 0.5rem 0;
+}
+.content .buttons {
+  display: flex;
+  align-items: center;
+}
+.content .buttons .no i {
+  color: #fd2e79;
+  font-size: 32px;
+}
+.content .buttons .no:hover {
+  background-color: #fd2e79;
+}
+.content .buttons .no:hover i {
+  color: #fff;
+}
+.content .buttons .yes i {
+  color: #11e298;
+  font-size: 32px;
+}
+.content .buttons .yes:hover {
+  background-color: #11e298;
+}
+.content .buttons .yes:hover i {
+  color: #fff;
+}
+.content .buttons .no, .content .buttons .yes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin: 0 1rem 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+  transition: 0.2s all;
+}
+.content .buttons .no:hover, .content .buttons .yes:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 750px) {
+  .side {
+    display: none;
+  }
+}/*# sourceMappingURL=petMatchstyle.css.map */
