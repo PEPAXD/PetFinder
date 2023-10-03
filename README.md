@@ -1,6 +1,7 @@
 # PetFinder - Pet Adoption Website
 
-![PetFinder Logo](/img/logo.svg)
+![Index](/img/WebSiteView (1).png)
+
 
 ## About
 PetFinder is a pet adoption website developed by Mauro Pepa. 
