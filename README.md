@@ -1,6 +1,6 @@
 # PetFinder - Pet Adoption Website
 
-![Index](/img/WebSiteView (1).png)
+![Index](/WebSiteView (1).png)
 
 
 ## About
