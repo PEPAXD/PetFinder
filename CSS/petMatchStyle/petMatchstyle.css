@@ -8,7 +8,7 @@
 
 body {
   font-family: "Readex Pro", sans-serif;
-  background: url("/img/MatchBackgroundCreateAccount.png");
+  background: url("../../img/MatchBackgroundCreateAccount.png");
   overflow: hidden;
   background-size: 75%;
   height: 95vh;
