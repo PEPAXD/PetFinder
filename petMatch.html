@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/petMatchStyle/petMatchstyle.css" />
+		<link rel="shortcut icon" href="/img/logo.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+		<title>PetFinder - Match</title>
+
+		<!--icons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	</head>
+	<body>
+		<!--HeaderNavBarMenu-->
+		<header>
+
+		<!--UserProfile_Header-->
+		<div class="header">
+			<div class="avatar">
+				<img src="https://randomuser.me/api/portraits/women/40.jpg" alt="">
+			</div>
+			<div class="title">Laura Rodríguez</div>
+		</div>
+
+			<nav class="navbar">
+					<div class="links-navbar">
+						<ul>
+							<li>
+							<a href="index.html">
+							<span class="icon"><i class="fa-solid fa-house" style="color: #f79e46;"></i></span>
+							<span class="title">Home</span>
+							</a>
+							</li>
+							<li>
+							<span class="icon"><i class="fa-solid fa-hand-holding-dollar" style="color: #f79e46;"></i></ion-icon></span>
+							<span class="title">Donate</span>
+							</li>
+							<li>
+							<span class="icon"><i class="fa-solid fa-envelope" style="color: #f79e46;"></i></span>
+							<span class="title">Contact</span>
+							</li>
+							<li>
+							<span class="icon"><i class="fa-solid fa-heart" style="color: #f79e46;"></i></span>
+							<span class="title">matchs</span>
+							</li>
+						</ul>
+				</div>
+			
+			</nav>
+		</header>
+
+		<div class="background">	
+			<!--MatchSide-->
+			<div class="side">
+
+        <!-- Buttons_CatDog -->
+		<div class="tab">
+			<div class="menu">
+				<button id="catsButton">CAT</button>
+				<button id="dogsButton">DOG</button>
+				<div class="line"></div>
+			</div>	
+		</div>
+
+		<!--PetsChat-->
+		<div class="messages">
+			
+			<div class="avatar">
+				<img src="/img/Dog2.jpg" alt="" />
+			</div>
+			<div class="message">
+				<div class="user">NAME <span class="sex"><i class="fa-solid fa-mars" style="color: #0099cc;"></i></span></div>
+				<div class="text">RAZA</div>
+				
+			</div>
+		</div>	
+
+		<div class="messages">
+			
+			<div class="avatar">
+				<img src="/img/Dog3.jpg" alt="" />
+			</div>
+			<div class="message">
+				<div class="user">NAME <span class="sex"><i class="fa-solid fa-venus" style="color: #ff69b4;"></i></span></div>
+				<div class="text">RAZA</div>
+				
+			</div>
+		</div>	
+
+		<div class="messages">
+			
+			<div class="avatar">
+				<img src="/img/Dog4.jpg" alt="" />
+			</div>
+			<div class="message">
+				<div class="user">NAME <span class="sex"><i class="fa-solid fa-venus" style="color: #ff69b4;"></i></span></div>
+				<div class="text">RAZA</div>
+				
+			</div>
+		</div>	
+
+		<div class="messages">
+			
+			<div class="avatar">
+				<img src="/img/Dog5.jpg" alt="" />
+			</div>
+			<div class="message">
+				<div class="user">NAME <span class="sex"><i class="fa-solid fa-mars" style="color: #0099cc;"></i></span></div>
+				<div class="text">RAZA</div>
+				
+			</div>
+		</div>	
+
+		<div class="messages">
+			
+			<div class="avatar">
+				<img src="/img/Dog6.jpg" alt="" />
+			</div>
+			<div class="message">
+				<div class="user">NAME <span class="sex"><i class="fa-solid fa-mars" style="color: #0099cc;"></i></span></div>
+				<div class="text">RAZA</div>
+				
+			</div>
+		</div>	
+
+		</div>
+
+		<!--PetsCardSlider-->
+		<div class="content">
+			<div class="cardCover">
+
+			<!--petsPhoto-->
+			<div class="card">
+				<div class="user">
+					<img
+						class="user"
+						src="/img/Dog1.jpg"
+						alt=""/>
+					<div class="profile">
+						<div class="name">NAME<span class="sex"><i class="fa-solid fa-mars" style="color: #fff;"></i></span></div>
+						<div class="local">
+							<span>Raza</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--petsText-->
+			<div class="petsLore">
+				<p>- Me encanta jugar 🎾, dar paseos 🌳 y pasar tiempo con personas 👨‍👩‍👧.</p>
+				<p>- Estoy esterilizado y vacunado 💉, listo para unirme a tu familia.</p>
+			</div>
+
+			<!--LikeDislike_buttons-->
+			<div class="buttons">
+				<div class="no">
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="yes">
+					<i class="fas fa-heart" id="yesButton"></i>
+				</div>
+			</div>
+		</div>
+		</div>
+
+    <!--Script checkButton-->
+    <script src="/JS/switchCatDog_Match.js"></script>
+
+	<script
+		type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+	></script>
+	
+	<script
+		nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+	></script>
+	</body>
+</html>
